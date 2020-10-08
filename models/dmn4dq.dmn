@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="businessRules" name="Business Rules" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.7.0">
+  <decision id="BR01" name="BR01">
+    <extensionElements>
+      <biodi:bounds x="160" y="490" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_040j91i" hitPolicy="FIRST">
+      <input id="InputClause_0bbq1z8" label="Location" camunda:inputVariable="Location">
+        <inputExpression id="LiteralExpression_1iwaqcz" typeRef="string">
+          <text>Location</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0lfar1z" label="BR01" name="BR01" typeRef="integer" />
+      <rule id="row-506282952-6">
+        <description></description>
+        <inputEntry id="UnaryTests_0s5azk4">
+          <text>null</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nspzk1">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rfk0m2">
+        <inputEntry id="UnaryTests_1dobno0">
+          <text>"", " "</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qy33mk">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1aqpqsv">
+        <inputEntry id="UnaryTests_1fg8u09">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1oeqoue">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0s8j4la">
+        <inputEntry id="UnaryTests_0uklejg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ia7isd">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="BR02" name="BR02">
+    <extensionElements>
+      <biodi:bounds x="1297" y="490" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_09s62fy" hitPolicy="FIRST">
+      <input id="InputClause_1eyp13g" label="Location" camunda:inputVariable="Location">
+        <inputExpression id="LiteralExpression_121wi3c" typeRef="string" expressionLanguage="FEEL">
+          <text>Location</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1ig2sc2" label="BR02" name="BR02" typeRef="string" />
+      <rule id="DecisionRule_19qdf1x">
+        <inputEntry id="UnaryTests_1jsbfys">
+          <text>"EU (Paris)", "Asia Pacific (Mumbai)", "US West (N. California)", "AWS GovCloud (US-East)", "EU (Ireland)", "US East (Ohio)", "Asia Pacific (Sydney)", "Asia Pacific (Seoul)", "EU (Frankfurt)", "Asia Pacific (Hong Kong)", "AWS GovCloud (US)", "Canada (Central)", "South America (Sao Paulo)", "US West (Oregon)", "EU (Stockholm)", "Asia Pacific (Tokyo)", "Asia Pacific (Osaka-Local)", "US East (N. Virginia)", "Asia Pacific (Singapore)", "EU (London)"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03rmga7">
+          <text>"appropriate"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0drees6">
+        <inputEntry id="UnaryTests_1nii0k8">
+          <text>"EU", "Asia", "US", "Pacific", "AWS", "Canada", "South America"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1stk8hw">
+          <text>"appropriate enough"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18l9obb">
+        <inputEntry id="UnaryTests_1t3xfcr">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0oscrug">
+          <text>"inappropriate"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="BR03" name="BR03">
+    <extensionElements>
+      <biodi:bounds x="350" y="490" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_0zxd3as" hitPolicy="FIRST">
+      <input id="InputClause_00k1mqi" label="ClockSpeed" camunda:inputVariable="ClockSpeed">
+        <inputExpression id="LiteralExpression_1cltxvr" typeRef="string" expressionLanguage="FEEL">
+          <text>ClockSpeed</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1ry4y0v" label="BR03" name="BR03" typeRef="integer" />
+      <rule id="DecisionRule_1ifopeb">
+        <inputEntry id="UnaryTests_16rdrpw">
+          <text>null</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wpg1nd">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gdifqt">
+        <inputEntry id="UnaryTests_1q3ksl5">
+          <text>"", " "</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03wde0k">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_020wwws">
+        <inputEntry id="UnaryTests_19jl595">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_110p86d">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="BR04" name="BR04">
+    <extensionElements>
+      <biodi:bounds x="1490" y="490" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_1j2re8y" hitPolicy="FIRST">
+      <input id="InputClause_0y9cmi0" label="ClockSpeed" camunda:inputVariable="ClockSpeed">
+        <inputExpression id="LiteralExpression_0m0foxd" typeRef="string">
+          <text>ClockSpeed</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1ndbmcp" label="BR04" name="BR04" typeRef="boolean" />
+      <rule id="DecisionRule_0fk83zo">
+        <inputEntry id="UnaryTests_1kfjxrf">
+          <text>matches(ClockSpeed, "^(\d+(?:\.?)\d* GHz)$")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0m1fa1i">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15kf7x5">
+        <inputEntry id="UnaryTests_0qr6393">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gm5yce">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="BR05" name="BR05">
+    <extensionElements>
+      <biodi:bounds x="540" y="490" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_0pz6392" hitPolicy="FIRST">
+      <input id="InputClause_1mvz3hq" label="Memory" camunda:inputVariable="Memory">
+        <inputExpression id="LiteralExpression_1uu9rww" typeRef="string">
+          <text>Memory</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_09jz99a" label="BR05" name="BR05" typeRef="integer" />
+      <rule id="DecisionRule_1dar8v6">
+        <inputEntry id="UnaryTests_04enmdi">
+          <text>null</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dfygfy">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0pacytv">
+        <inputEntry id="UnaryTests_0erua4p">
+          <text>"", " "</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1yd3j0w">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1sfera0">
+        <inputEntry id="UnaryTests_0kmh4ke">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kt07wp">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="BR06" name="BR06">
+    <extensionElements>
+      <biodi:bounds x="1680" y="490" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_1wnstza" hitPolicy="FIRST">
+      <input id="InputClause_1cdji33" label="Memory" camunda:inputVariable="Memory">
+        <inputExpression id="LiteralExpression_1yddy60" typeRef="string">
+          <text>Memory</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0ewjjt2" label="BR06" name="BR06" typeRef="string" />
+      <rule id="DecisionRule_181j1zr">
+        <inputEntry id="UnaryTests_04lpiql">
+          <text>matches(Memory, "^(\d+(?:\.?)\d* GiB)$")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0p0e83x">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1tv72bn">
+        <inputEntry id="UnaryTests_1a9jrtg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kc76ff">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="BR07" name="BR07">
+    <extensionElements>
+      <biodi:bounds x="730" y="490" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_13n27hf" hitPolicy="FIRST">
+      <input id="InputClause_1b8jydc" label="InstanceFamily" camunda:inputVariable="InstanceFamily">
+        <inputExpression id="LiteralExpression_1atlqsm" typeRef="string">
+          <text>InstanceFamily</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1nws4ky" label="BR07" name="BR07" typeRef="integer" />
+      <rule id="DecisionRule_1wwwkjc">
+        <inputEntry id="UnaryTests_117ujfv">
+          <text>null</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0f2mx7z">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1d0l5nt">
+        <inputEntry id="UnaryTests_0ctar22">
+          <text>"", " "</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_028r34i">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0d6ctoi">
+        <inputEntry id="UnaryTests_1774aoy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05fn6i1">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="BR08" name="BR08">
+    <extensionElements>
+      <biodi:bounds x="1870" y="490" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_14g5tit" hitPolicy="FIRST">
+      <input id="InputClause_1s38vl3" label="InstanceFamily" camunda:inputVariable="InstanceFamily">
+        <inputExpression id="LiteralExpression_040ydwh" typeRef="string">
+          <text>InstanceFamily</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1xgnc6z" label="BR08" name="BR08" typeRef="string" />
+      <rule id="DecisionRule_0ad42p7">
+        <inputEntry id="UnaryTests_1kgo218">
+          <text>"Compute optimized", "General purpose", "Memory optimized", "Storage optimized"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lw8w1m">
+          <text>"appropriate"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01kaz42">
+        <inputEntry id="UnaryTests_1nnyltj">
+          <text>"FPGA Instances", "GPU instance", "Micro instances"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1c0eb5j">
+          <text>"appropriate enough"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_186iw7i">
+        <inputEntry id="UnaryTests_03xis9x">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11kfyb7">
+          <text>"inappropriate"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="BR09" name="BR09">
+    <extensionElements>
+      <biodi:bounds x="2440" y="490" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_0dh6sma" hitPolicy="FIRST">
+      <input id="InputClause_0klaoog" label="Memory" camunda:inputVariable="Memory">
+        <inputExpression id="LiteralExpression_0ynk3db" typeRef="string">
+          <text>Memory</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0bx1dzi" label="ClockSpeed" camunda:inputVariable="ClockSpeed">
+        <inputExpression id="LiteralExpression_1sc3qq7" typeRef="string">
+          <text>ClockSpeed</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0lj00iz" label="Storage" camunda:inputVariable="Storage">
+        <inputExpression id="LiteralExpression_1qh339b" typeRef="string">
+          <text>Storage</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1hbjec0" label="InstanceFamily" camunda:inputVariable="InstanceFamily">
+        <inputExpression id="LiteralExpression_1who5v8" typeRef="string">
+          <text>InstanceFamily</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_111tt1d" label="BR09" name="BR09" typeRef="integer" />
+      <rule id="DecisionRule_0ybzkxe">
+        <inputEntry id="UnaryTests_03j4qq8">
+          <text>number(if(Memory != null) then split(Memory, " +")[1] else null) &lt; 64</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_110leiy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wfqoue">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oxy0jr">
+          <text>"Memory optimized"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0h3l1lf">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1f7m6jz">
+        <inputEntry id="UnaryTests_1wuxwjt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cyhhny">
+          <text>number(if(ClockSpeed != null) then split(ClockSpeed, " +")[1] else null) &lt; 2.9</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ienn5e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16ejs48">
+          <text>"Compute optimized"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1imyu2g">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1w1cy3d">
+        <inputEntry id="UnaryTests_0tnpckj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_060a2p8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ra1dtj">
+          <text>not(contains(Storage, "SSD"))</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ts6y77">
+          <text>"Storage optimized"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rnfxqw">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1y9px8b">
+        <inputEntry id="UnaryTests_1nwtthy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tvm19q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wvfgmx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q3zrmz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rg6cav">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="BR10" name="BR10">
+    <extensionElements>
+      <biodi:bounds x="920" y="490" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_1my6acz" hitPolicy="FIRST">
+      <input id="InputClause_010kffr" label="OperatingSystem" camunda:inputVariable="OperatingSystem">
+        <inputExpression id="LiteralExpression_0cxss2o" typeRef="string">
+          <text>OperatingSystem</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1kak97b" label="BR10" name="BR10" typeRef="integer" />
+      <rule id="DecisionRule_1dpc9kl">
+        <inputEntry id="UnaryTests_03xknu3">
+          <text>null</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jl5q5i">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ne24vy">
+        <inputEntry id="UnaryTests_0kvgn2b">
+          <text>"", " "</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vcv55v">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hb0y81">
+        <inputEntry id="UnaryTests_1b6js3b">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02c3iba">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="BR11" name="BR11">
+    <extensionElements>
+      <biodi:bounds x="2060" y="490" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_10aqu40" hitPolicy="FIRST">
+      <input id="InputClause_0pm1vc8" label="OperatingSystem" camunda:inputVariable="OperatingSystem">
+        <inputExpression id="LiteralExpression_013htlo" typeRef="string">
+          <text>OperatingSystem</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1po27pa" label="BR11" name="BR11" typeRef="string" />
+      <rule id="DecisionRule_04afjle">
+        <inputEntry id="UnaryTests_04fhdrh">
+          <text>"Linux", "RHEL", "SUSE", "Windows"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_077b73g">
+          <text>"appropriate"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0cawk7u">
+        <inputEntry id="UnaryTests_0fr4arh">
+          <text>"Ubuntu", "Red Hat", "Open Suse"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10hhfhw">
+          <text>"appropriate enough"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rgmybv">
+        <inputEntry id="UnaryTests_02vzf8n">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ybxcpm">
+          <text>"inappropriate"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="BR12" name="BR12">
+    <extensionElements>
+      <biodi:bounds x="1110" y="490" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_0lntemq" hitPolicy="FIRST">
+      <input id="InputClause_178v0ak" label="PricePerUnit" camunda:inputVariable="PricePerUnit">
+        <inputExpression id="LiteralExpression_0doed9k" typeRef="string">
+          <text>PricePerUnit</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1eedk47" label="BR12" name="BR12" typeRef="integer" />
+      <rule id="DecisionRule_0xhs4ym">
+        <inputEntry id="UnaryTests_0g474fp">
+          <text>null</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08x5h36">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0yu3sjg">
+        <inputEntry id="UnaryTests_1gxel8z">
+          <text>"0", "", " "</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1owld0e">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1l716lw">
+        <inputEntry id="UnaryTests_0lx9uax">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1iv9tly">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="BR13" name="BR13">
+    <extensionElements>
+      <biodi:bounds x="2250" y="490" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="DecisionTable_1asfftj" hitPolicy="FIRST">
+      <input id="InputClause_0s5j32q" label="PricePerUnit" camunda:inputVariable="PricePerUnit">
+        <inputExpression id="LiteralExpression_1n5z7p1" typeRef="double">
+          <text>PricePerUnit</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0tsvio9" label="BR13" name="BR13" typeRef="string" />
+      <rule id="DecisionRule_06q41vq">
+        <inputEntry id="UnaryTests_0v60q0c">
+          <text>&gt;= 0, &lt; 10000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0iz0zyo">
+          <text>"realistic"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12izo3k">
+        <inputEntry id="UnaryTests_0m375yg">
+          <text>&gt;= 10000, &lt;100000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14vl8w1">
+          <text>"exaggerated"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1b00rmu">
+        <inputEntry id="UnaryTests_0krap5n">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ea9ocs">
+          <text>"unrealistic"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Completeness" name="Completeness">
+    <extensionElements>
+      <biodi:bounds x="630" y="250" width="180" height="80" />
+      <biodi:edge source="BR01">
+        <biodi:waypoints x="328" y="490" />
+        <biodi:waypoints x="640" y="330" />
+      </biodi:edge>
+      <biodi:edge source="BR03">
+        <biodi:waypoints x="496" y="490" />
+        <biodi:waypoints x="660" y="330" />
+      </biodi:edge>
+      <biodi:edge source="BR05">
+        <biodi:waypoints x="653" y="490" />
+        <biodi:waypoints x="670" y="330" />
+      </biodi:edge>
+      <biodi:edge source="BR07">
+        <biodi:waypoints x="812" y="490" />
+        <biodi:waypoints x="770" y="330" />
+      </biodi:edge>
+      <biodi:edge source="BR10">
+        <biodi:waypoints x="968" y="490" />
+        <biodi:waypoints x="780" y="330" />
+      </biodi:edge>
+      <biodi:edge source="BR12">
+        <biodi:waypoints x="1126" y="490" />
+        <biodi:waypoints x="800" y="330" />
+      </biodi:edge>
+    </extensionElements>
+    <informationRequirement>
+      <requiredDecision href="#BR01" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#BR03" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#BR05" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#BR07" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#BR10" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#BR12" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0adh2ok" hitPolicy="FIRST">
+      <input id="InputClause_0b7wkkg" label="BR01" camunda:inputVariable="BR01">
+        <inputExpression id="LiteralExpression_0ldhusr" typeRef="integer">
+          <text>BR01</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1l02taj" label="BR03" camunda:inputVariable="BR03">
+        <inputExpression id="LiteralExpression_0zytpea" typeRef="integer">
+          <text>BR03</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_11j4pw0" label="BR05" camunda:inputVariable="BR05">
+        <inputExpression id="LiteralExpression_02ubvhd" typeRef="integer">
+          <text>BR05</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0ktc3we" label="BR07" camunda:inputVariable="BR07">
+        <inputExpression id="LiteralExpression_01r5rdp" typeRef="integer">
+          <text>BR07</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0uzc7b1" label="BR10" camunda:inputVariable="BR10">
+        <inputExpression id="LiteralExpression_0vpgiui" typeRef="integer">
+          <text>BR10</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0tgo7f6" label="BR12" camunda:inputVariable="BR12">
+        <inputExpression id="LiteralExpression_0nwtn1c" typeRef="integer">
+          <text>BR12</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1b2mqpz" label="Completeness" name="Completeness" typeRef="string" />
+      <rule id="DecisionRule_1x7zuq0">
+        <description>BR.DQM.01</description>
+        <inputEntry id="UnaryTests_02mfxnb">
+          <text>&gt;=2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0to4yni">
+          <text>&gt;=2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0shpsba">
+          <text>&gt;=2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13140c9">
+          <text>&gt;=2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ewsycz">
+          <text>&gt;=2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1477flm">
+          <text>&gt;=2</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xguaqj">
+          <text>"adequately complete"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dz6r9d">
+        <description>BR.DQM.02</description>
+        <inputEntry id="UnaryTests_1385620">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jkrlol">
+          <text>&gt;=2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dhrpuq">
+          <text>&gt;=2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gj43tr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mnqybx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xqct24">
+          <text>&gt;=1</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0z1s0te">
+          <text>"complete enough"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1dzpzd2">
+        <description>BR.DQM.03</description>
+        <inputEntry id="UnaryTests_0zejytw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nrilxz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wjgigs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1orix5b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t1z0z1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dzib2h">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ms3wys">
+          <text>"not complete"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Accuracy" name="Accuracy">
+    <extensionElements>
+      <biodi:bounds x="1780" y="250" width="180" height="80" />
+      <biodi:edge source="BR02">
+        <biodi:waypoints x="1468" y="490" />
+        <biodi:waypoints x="1790" y="330" />
+      </biodi:edge>
+      <biodi:edge source="BR04">
+        <biodi:waypoints x="1626" y="490" />
+        <biodi:waypoints x="1810" y="330" />
+      </biodi:edge>
+      <biodi:edge source="BR06">
+        <biodi:waypoints x="1784" y="490" />
+        <biodi:waypoints x="1840" y="330" />
+      </biodi:edge>
+      <biodi:edge source="BR08">
+        <biodi:waypoints x="1946" y="490" />
+        <biodi:waypoints x="1890" y="330" />
+      </biodi:edge>
+      <biodi:edge source="BR13">
+        <biodi:waypoints x="2262" y="490" />
+        <biodi:waypoints x="1950" y="330" />
+      </biodi:edge>
+      <biodi:edge source="BR11">
+        <biodi:waypoints x="2106" y="490" />
+        <biodi:waypoints x="1930" y="330" />
+      </biodi:edge>
+    </extensionElements>
+    <informationRequirement>
+      <requiredDecision href="#BR02" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#BR04" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#BR06" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#BR08" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#BR11" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#BR13" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1sknei5" hitPolicy="FIRST">
+      <input id="InputClause_1ezx6vl" label="BR02" camunda:inputVariable="BR02">
+        <inputExpression id="LiteralExpression_1i3s5kz" typeRef="string">
+          <text>BR02</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1vl80mc" label="BR04" camunda:inputVariable="BR04">
+        <inputExpression id="LiteralExpression_0ah2d2u" typeRef="boolean">
+          <text>BR04</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1hmzyfn" label="BR06" camunda:inputVariable="BR06">
+        <inputExpression id="LiteralExpression_17jok1v" typeRef="boolean">
+          <text>BR06</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_12tdggs" label="BR08" camunda:inputVariable="BR08">
+        <inputExpression id="LiteralExpression_0fjgaoo" typeRef="string">
+          <text>BR08</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_07oy8n1" label="BR11" camunda:inputVariable="BR11">
+        <inputExpression id="LiteralExpression_0ukvtp1" typeRef="string">
+          <text>BR11</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_17ex6kw" label="BR13" camunda:inputVariable="BR13">
+        <inputExpression id="LiteralExpression_0c3em5d" typeRef="string">
+          <text>BR13</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_04p341m" label="Accuracy" name="Accuracy" typeRef="integer" />
+      <rule id="DecisionRule_1veg5mp">
+        <description>BR.DQM.04</description>
+        <inputEntry id="UnaryTests_0rbgw24">
+          <text>"appropriate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_125258k">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gudvku">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x5q51k">
+          <text>"appropriate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0px5jel">
+          <text>"appropriate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fhvh6q">
+          <text>"realistic"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1b31l4e">
+          <text>100</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lkpc34">
+        <description>BR.DQM.05</description>
+        <inputEntry id="UnaryTests_1pwkxs4">
+          <text>not("inappropriate")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18jq287">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n69kjv">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04aaoz4">
+          <text>not("inappropriate")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ssmd18">
+          <text>not("inappropriate")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bn9350">
+          <text>not("unrealistic")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_051r7i3">
+          <text>70</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_17gpdtt">
+        <description>BR.DQM.06</description>
+        <inputEntry id="UnaryTests_12s3aj9">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w9nb5h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ucchj0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g0tfmz">
+          <text>not("inappropriate")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16lk64w">
+          <text>not("inappropriate")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q9spxj">
+          <text>not("unrealistic")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02bzunb">
+          <text>50</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18ao28b">
+        <inputEntry id="UnaryTests_17w8yzj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ah29jh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z84o4r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b97je9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bx8w4m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1i8y57p">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ng0w4i">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1alnrgs">
+        <inputEntry id="UnaryTests_1dukb9w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vz4c8l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02gx0nr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1djyybe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k2vkmh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_193pzfj">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0khzgzc">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Consistency" name="Consistency">
+    <extensionElements>
+      <biodi:bounds x="2440" y="250" width="180" height="80" />
+      <biodi:edge source="BR09">
+        <biodi:waypoints x="2530" y="490" />
+        <biodi:waypoints x="2530" y="330" />
+      </biodi:edge>
+    </extensionElements>
+    <informationRequirement>
+      <requiredDecision href="#BR09" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1o3xucs" hitPolicy="FIRST">
+      <input id="InputClause_0vx4fp0" label="BR09" camunda:inputVariable="BR09">
+        <inputExpression id="LiteralExpression_1yi2nhc" typeRef="integer">
+          <text>BR09</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1qyyb2p" label="Consistency" name="Consistency" typeRef="string" />
+      <rule id="DecisionRule_1c98ou6">
+        <description>BR.DQM.07</description>
+        <inputEntry id="UnaryTests_1dmf1yr">
+          <text>&gt;=3</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16gb5ka">
+          <text>"consistent"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_146d1kp">
+        <description>BR.DQM.08</description>
+        <inputEntry id="UnaryTests_1s86b30">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14y1cfc">
+          <text>"inconsistent"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="DQAssessment" name="DQAssessment">
+    <extensionElements>
+      <biodi:bounds x="1780" y="80" width="180" height="80" />
+      <biodi:edge source="Completeness">
+        <biodi:waypoints x="810" y="263" />
+        <biodi:waypoints x="1800" y="160" />
+      </biodi:edge>
+      <biodi:edge source="Consistency">
+        <biodi:waypoints x="2440" y="265" />
+        <biodi:waypoints x="1950" y="160" />
+      </biodi:edge>
+      <biodi:edge source="Accuracy">
+        <biodi:waypoints x="1870" y="250" />
+        <biodi:waypoints x="1870" y="160" />
+      </biodi:edge>
+    </extensionElements>
+    <informationRequirement>
+      <requiredDecision href="#Completeness" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#Accuracy" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#Consistency" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1fdu3ad" hitPolicy="FIRST">
+      <input id="InputClause_1lt13x1" label="Completeness" camunda:inputVariable="Completeness">
+        <inputExpression id="LiteralExpression_1h4e1w2" typeRef="string">
+          <text>Completeness</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0wnmz73" label="Accuracy" camunda:inputVariable="Accuracy">
+        <inputExpression id="LiteralExpression_0t37fbg" typeRef="integer">
+          <text>Accuracy</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1a4exu6" label="Consistency" camunda:inputVariable="Consistency">
+        <inputExpression id="LiteralExpression_1j4kdho" typeRef="string">
+          <text>Consistency</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1jgmbkz" label="DQAssessment" name="DQAssessment" typeRef="string" />
+      <rule id="DecisionRule_14dzdlf">
+        <description>BR.DQA.01</description>
+        <inputEntry id="UnaryTests_1pardrr">
+          <text>"adequately complete"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02hy73c">
+          <text>100</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h4iit7">
+          <text>"consistent"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dwp284">
+          <text>"suitable"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0195fwi">
+        <description>BR.DQA.02</description>
+        <inputEntry id="UnaryTests_0ukp58c">
+          <text>not("not complete")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kkq04h">
+          <text>&gt;=70</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15ukfez">
+          <text>"consistent"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gkxfpw">
+          <text>"enough quality"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1buk27b">
+        <description>BR.DQA.03</description>
+        <inputEntry id="UnaryTests_02mp2b3">
+          <text>not("not complete")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vupff4">
+          <text>&gt;=50</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1goj3ny">
+          <text>"consistent"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0r6txs3">
+          <text>"bad quality"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0wb3tyj">
+        <inputEntry id="UnaryTests_1j9po0f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hap4hv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1awix71">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17lkcux">
+          <text>"non usable"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
